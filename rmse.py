@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 load_filename = "mid_rmse.npy"
-fig_name = "rsme.png"
+fig_name = "rmse.png"
 #rsmeの値の入ったファイルを開く
 file = np.load(load_filename)
 

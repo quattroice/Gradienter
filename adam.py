@@ -56,7 +56,7 @@ for i in range(trial):
 	zz = sigm(x.dot(w))
 	err_tmp = np.sqrt((y-zz).dot(y-zz))
 	if (err-err_tmp)**2 < th:
-		print(i,":breaking!")
+		print(i,":breaking!",w)
 		break
 	err = err_tmp
 	
@@ -73,7 +73,7 @@ plt.plot(x2[:,0],sigm(x2.dot(w)))
 plt.plot(x[:,0],y,"ro",markersize=10)
 plt.hlines([0, 1],1,2,linestyles="dashed")
 plt.ylim(-0.1,1.1)
-plt.savefig("aaa.png")
+plt.savefig("result.png")
 
 #別プログラムにてRMSEを解析するためにその値を保存する。
 mmm = np.array(mid_rsme)
